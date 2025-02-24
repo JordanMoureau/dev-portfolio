@@ -1,0 +1,56 @@
+.vertical-text {
+  writing-mode: vertical-lr;
+  text-orientation: mixed;
+}
+/* 
+.social-icon {
+  color: white;
+  transition: background 0.9s ease-in-out;
+}
+
+.social-icon:hover {
+  background: linear-gradient(to right, #f9c0ab, #e58fa5, #f9c0ab);
+} */
+
+.neg-marg {
+  margin-top: -8px;
+}
+
+::selection {
+  background: white;
+}
+
+@keyframes waveGradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  25% {
+    background-position: 50% 60%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  75% {
+    background-position: 50% 40%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.party-mode {
+  background: linear-gradient(90deg, #f9c0ab, #a8cd89, #fbf6e9);
+  background-size: 400% 400%;
+  animation: waveGradient 6s ease infinite;
+}
+
+@keyframes fall {
+  0% {
+    transform: translateY(-10vh) rotate(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh) rotate(360deg);
+    opacity: 0;
+  }
+}
