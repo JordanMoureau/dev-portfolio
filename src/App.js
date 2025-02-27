@@ -6,18 +6,17 @@ import "./styles.css";
 import useEmojiRain from "./hooks/useEmojiRain";
 import CLIcomponent from "./components/CLIcomponent";
 import { useEffect, useState } from "react";
+import { PartyModeProvider, usePartyMode } from "./context/PartyModeContext"; // Import Context
 
-import usePartyMode from "./hooks/usePartyMode";
-
-function App() {
-  const { isPartyMode, togglePartyMode } = usePartyMode();
+function AppContent() {
+  const { isPartyMode } = usePartyMode(); // Use the context
   const emojis = useEmojiRain(isPartyMode);
   const [cliOpen, setCliOpen] = useState(false);
 
   useEffect(() => {
     const handleKeyDown = (e) => {
       if ((e.metaKey || e.ctrlKey) && e.key === "j") {
-        e.preventDefault(); // Prevent browser conflicts
+        e.preventDefault();
         setCliOpen((prev) => !prev);
       }
     };
@@ -45,17 +44,20 @@ function App() {
           {emoji.emoji}
         </span>
       ))}
-      <ConnectBar togglePartyMode={togglePartyMode} />
-      <CLI isPartyMode={isPartyMode} />
+      <ConnectBar />
+      <CLI />
       <BioSection />
       <WidgetsSection />
-      <CLIcomponent
-        togglePartyMode={togglePartyMode}
-        isOpen={cliOpen}
-        toggleCLI={() => setCliOpen(!cliOpen)}
-      />
+      <CLIcomponent isOpen={cliOpen} toggleCLI={() => setCliOpen(!cliOpen)} />
     </div>
   );
 }
 
-export default App;
+// Wrap everything inside PartyModeProvider
+export default function App() {
+  return (
+    <PartyModeProvider>
+      <AppContent />
+    </PartyModeProvider>
+  );
+}

@@ -1,57 +1,65 @@
 import { motion } from "framer-motion";
+import freej from "../media/freej.mov";
+import shn from "../media/shn.mov";
+import pokemath from "../media/pokemath.mov";
+import strategic from "../media/strategic.mov";
+import spotify from "../media/spotify.mov";
 
 export default function ProjectsSection() {
   const projects = [
     {
       title: "Freelance Jordan | Artist Portfolio",
       description:
-        "A front-end website built to showcase my designer portfolio and the type of web projects I take as a freelancer",
-      stack: ["React", "Netlify", "Next JS", "Form Spree", "Framer Motion"],
-      // video: strategic,
-      github: "https://github.com/freej-web",
+        "A classic, front-end portfolio designed to showcase my work, my vibe, and the kind of web projects I build as a freelancer.",
+      stack: ["React", "Vercel", "Next JS", "Form Spree", "Framer Motion"],
+      video: freej,
+      github: "https://github.com/JordanMoureau/freej-web",
       live: "https://freelancejordan.com",
     },
     {
       title: "Spokane Helpers | A Custom CMS System",
-      description: "This project is a non-indexed CMS MVP.",
+      description:
+        "A custom-built CMS MVP for a local charity, designed to streamline content updates and improve community outreach. Currently in progress.",
       stack: ["React", "Rails", "Tailwind", "Netlify", "Heroku"],
-      // video: clarity,
-      github: "https://github.com/example",
-      live: "https://strategicflow.net/",
+      video: shn,
+      github: "https://github.com/JordanMoureau/spokane-helpers-front-end",
+      live: "https://z7g9u3.netlify.app/",
     },
     {
       title: "PokeMath | A React Web App Math Game",
       description:
-        "A project built to bring my kids math averages up. Solve the problem and evolve your pokemon.",
+        "A Pokémon-themed math game designed to make learning fun—solve equations, evolve your Pokémon, and train your brain!",
       stack: ["React", "Netlify"],
-      //  video: pokemath, // Placeholder demo video
-      github: "https://github.com/example",
+      video: pokemath,
+      github: "https://github.com/JordanMoureau/poke-math",
       live: "https://pokemath.netlify.app/",
     },
-    {
-      title: "Godzilla Codes | A Game for Learning Python",
-      description:
-        "I have built the godzilla game as promise, gamifying basic phython concepts for kids.",
-      stack: ["React", "Tailwind", "Netlify", "Custom Hooks"],
-      //  video: clarity,
-      github: "https://github.com/godzilla-codes",
-      live: "https://godzilla-codes.netlify.app/",
-    },
+    // {
+    //   title: "Godzilla Codes | A Game for Learning Python",
+    //   description:
+    //     "I have built the godzilla game as promise, gamifying basic phython concepts for kids.",
+    //   stack: ["React", "Tailwind", "Netlify", "Custom Hooks"],
+    //   //  video: clarity,
+    //   github: "https://github.com/godzilla-codes",
+    //   live: "https://godzilla-codes.netlify.app/",
+    // },
 
     {
       title: "Strategic Flow | A Front-End",
-      description: "A full-stack store built with React & Rails.",
-      stack: ["React", "Netlify", "React Helmet", "Email.Js", "Framer"],
-      // video: strategic,
-      github: "https://github.com/example",
+      description:
+        "An SEO-driven front-end crafted for a coaching business—designed for engagement, visibility, and client connections.",
+      stack: ["React", "Netlify", "React Helmet", "Email.Js", "Framer Motion"],
+      video: strategic,
+      github: "https://github.com/JordanMoureau/strategic-flow",
       live: "https://strategicflow.net/",
     },
     {
       title: "The Spotify API | Playlist Project",
-      description: "A full-stack store built with React & Rails.",
+      description:
+        "A throwback-inspired Spotify playlist builder—search for songs, create playlists, and save them directly to your account.",
       stack: ["React", "The Spotify API", "Netlify"],
-      // video: spotify,
-      github: "https://github.com/example",
+      video: spotify,
+      github: "https://github.com/JordanMoureau/retro-playlist",
       live: "https://retro-playlist.netlify.app/",
     },
   ];
@@ -98,7 +106,7 @@ export default function ProjectsSection() {
               </div>
 
               {/* Tech Stack Bubbles */}
-              <div className="mt-4 flex flex-wrap gap-2">
+              <div className="mt-4 flex flex-wrap justify-center align-center gap-2">
                 {project.stack.map((tech, i) => (
                   <span
                     key={i}

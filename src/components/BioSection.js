@@ -20,11 +20,11 @@ export default function BioSection() {
       <p className=" text-accent">
         Hey, I'm Jordan 👩🏻‍💻✨ a full-stack nerd who loves building projects bit
         by frustrating bit. I'm best at front-end, my skill stack leans heavily
-        on React, Next JS and Tailwind, with just enough back-end magic to make
-        things work the way I want them to. <br /> <br />
+        on React, Next JS and Tailwind, with just enough back-end to make things
+        work the way I want them to. <br /> <br />
         If I'm not coding, I'm probably lifting heavy, hiking in the wild, or
         oding on boba & pork buns while noodling about my next project. Let’s
-        build something together! ⚡️🫶🏻
+        build something! ⚡️🫶🏻
       </p>
 
       <Navigation />

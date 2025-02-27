@@ -1,11 +1,15 @@
 import { useState, useEffect, useRef } from "react";
+import { usePartyMode } from "../context/PartyModeContext"; // Import the context
 
-export default function CLIcomponent({ isOpen, toggleCLI, togglePartyMode }) {
+export default function CLIcomponent({ isOpen, toggleCLI }) {
   const [input, setInput] = useState("");
   const [history, setHistory] = useState([
     "Welcome to Jordan's CLI! Type 'help' to see available commands or try party mode.",
   ]);
   const inputRef = useRef(null);
+
+  // Use Party Mode from context
+  const { isPartyMode, togglePartyMode } = usePartyMode();
 
   useEffect(() => {
     if (isOpen) {
@@ -15,18 +19,18 @@ export default function CLIcomponent({ isOpen, toggleCLI, togglePartyMode }) {
 
   const handleInput = (e) => {
     if (e.key === "Enter") {
-      processCommand(input);
+      processCommand(input); // No need to pass togglePartyMode anymore
       setInput(""); // Clear input after submitting
     }
   };
 
-  const processCommand = (cmd, togglePartyMode) => {
+  const processCommand = (cmd) => {
     let response;
 
     switch (cmd.toLowerCase()) {
       case "help":
         response =
-          "Commands: help, about, skills, projects, hobbies, music, books, shows, movies, pets, contact, party";
+          "Commands: help, about, skills, projects, hobbies, music, books, shows, movies, pets, contact, party mode, pickles?";
         break;
 
       case "about":
@@ -34,16 +38,21 @@ export default function CLIcomponent({ isOpen, toggleCLI, togglePartyMode }) {
         break;
 
       case "skills":
-        response = "React, Rails, Tailwind, JavaScript. UI magic & clean code.";
+        response = "React, Rails, Tailwind, JavaScript.";
         break;
 
       case "projects":
         response =
-          "Work → freelancejordan.com. Clean, fast, functional. Click things.";
+          "Work → freelancejordan.com. Clean, fast, functional. Click things!";
+        break;
+
+      case "pickles?":
+        response = "error... errrooorrrr ERROR. Never question the pickles.";
         break;
 
       case "hobbies":
-        response = "Lifting heavy. Hiking far. Anime binges. Pork buns. 🚀";
+        response =
+          "Lifting heavy. Hiking far. Tv show binges. Tea (yes, the way I drink it, it is a hobby.). Pork buns. 🚀";
         break;
 
       case "music":
@@ -57,11 +66,12 @@ export default function CLIcomponent({ isOpen, toggleCLI, togglePartyMode }) {
 
       case "shows":
         response =
-          "A Discovery of Witches. Early Teen Wolf. Anime with good worldbuilding.";
+          "A Discovery of Witches. Early Teen Wolf. The Lady Jane. Anime with good worldbuilding.";
         break;
 
       case "movies":
-        response = "Daddy's Home. It Ends With Us. Emma (the 2020).";
+        response =
+          "Daddy's Home. It Ends With Us. Emma (the 2020). Kingsmen. Bridget Jones 4 Lyfe.";
         break;
 
       case "pets":
@@ -69,13 +79,14 @@ export default function CLIcomponent({ isOpen, toggleCLI, togglePartyMode }) {
         break;
 
       case "party mode":
-        response = "🔥 PARTY MODE: ON. Brace for impact. 🔥";
-        togglePartyMode();
+        response = isPartyMode
+          ? "Easy there. Party Mode is already on. "
+          : "🔥 The party has arrived. Brace for impact. 🔥";
+        togglePartyMode(); // Trigger Party Mode globally
         break;
 
       default:
-        response =
-          "Command not found: `${cmd}`. Type 'help' for available commands.";
+        response = `Command not found: '${cmd}'. Type 'help' for available commands.`;
     }
 
     setHistory((prev) => [...prev, `> ${cmd}`, response]);

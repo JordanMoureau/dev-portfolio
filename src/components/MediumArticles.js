@@ -20,16 +20,17 @@ export default function MediumArticles() {
     },
     {
       title:
-        "Drafting A README File That Slays & Why You Shouldn't Skip It - Even Though I Totally Did",
+        "Why You’re Getting “Undefined” in React (Even Though You KNOW You Passed Your Props Correctly)",
       description:
-        "I know, I know. We all get told in developer school (be it college or an endless stream of bootcamps and online tutorials) to always, always, always create read me files for projects on GitHub. Even GitHub will yell at you about it...",
-      link: "https://medium.com/example4",
+        "You quadruple-checked. You console.logged the prop at every step. You KNOW you passed it correctly. And yet — when you try to use it? Undefined. Undefined. Undefined....",
+      link: "https://medium.com/@jordanfromnovember/why-youre-getting-undefined-in-react-even-though-you-know-you-passed-your-props-correctly-5c2690e4860e",
     },
     {
-      title: "Build Your First Front-to-Back App with Rails & React",
+      title:
+        "Switch Statements Explained (With Boba, Courtrooms, and Rusty Code)",
       description:
-        "Step-by-step walkthrough on integrating Ruby on Rails with a modern React front end.",
-      link: "https://medium.com/example5",
+        "Okay, we can admit that switch statements are a little overwhelming. If else logic is so comforting, but here’s a painful truth nobody wants to hear: If else statements are ugly...",
+      link: "https://medium.com/@jordanfromnovember/switch-statements-explained-with-boba-courtrooms-and-rusty-code-dbfaa3940a1e",
     },
   ];
 

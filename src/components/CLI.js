@@ -1,4 +1,8 @@
-export default function CLI({ isPartyMode }) {
+import { usePartyMode } from "../context/PartyModeContext"; // Import the context
+
+export default function CLI() {
+  const { isPartyMode } = usePartyMode(); // Get isPartyMode from context
+
   return (
     <>
       {/* Vertical Indicator for CLI */}
