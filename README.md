@@ -1,70 +1,58 @@
-# Getting Started with Create React App
+# Jordan Moureau – Developer Portfolio
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+**Live Site:** [jordanmoureau.com](https://jordanmoureau.com)  
+**Tech Stack:** React, Next.js, TailwindCSS, Framer Motion, Context API
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## About This Project
 
-### `npm start`
+This portfolio is more than just a showcase—it's an interactive, personality-driven experience that represents my skills, humor, and approach to building web applications. The site is fully responsive, performance-optimized, and features custom animations, unique user interactions, and playful elements like **Party Mode** and a **CLI-powered "Get to Know Me" terminal**.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Key Features
 
-### `npm test`
+### Get to Know You CLI
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+A fully interactive command-line interface (CLI) built in React.
 
-### `npm run build`
+- Users can type commands to learn more about me (e.g., `skills`, `projects`, `movies`).
+- Includes a hidden **"Party Mode" command** that turns up the energy.
+- Built using **React state and event handlers** for command parsing.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Party Mode – Custom Hook & Context API
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+A dynamic Party Mode that transforms the entire experience.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- **Built with Context API**, allowing multiple components (CLI, Nav, etc.) to toggle it independently.
+- Uses a **custom React Hook** to manage animations and theme changes.
+- Integrates **Framer Motion** for smooth transitions.
 
-### `npm run eject`
+### Framer Motion Animations
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Used throughout the site for bounce effects, hover interactions, and reveal animations.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- **Hover Effects:** Components subtly scale up when hovered.
+- **While In View:** Sections animate into place as the user scrolls.
+- **Bouncy Elements:** Certain UI elements have a spring effect.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Custom Theme & UI
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+A personality-driven UI that leans into visual engagement.
 
-## Learn More
+- **Custom animations in Party Mode.**
+- CLI responses are crafted with personality for an engaging experience.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+---
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Built With
 
-### Code Splitting
+- **React** – Front-end framework
+- **Next.js** – Performance & routing
+- **TailwindCSS** – UI styling
+- **Framer Motion** – Animations & transitions
+- **Context API** – Global state management
+- **React Hooks** – Custom logic & interactivity
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+---
