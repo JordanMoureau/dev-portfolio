@@ -13,10 +13,10 @@ export default function MediumArticles() {
       link: "https://medium.com/@jordanfromnovember/video-autoplay-in-ios-react-js-0ee8ed919e5a",
     },
     {
-      title: "How Custom Hooks work (usePartyMode) ✨ - beginner friendly",
+      title: "Custom Hooks (usePartyMode) ✨ - beginner friendly",
       description:
         "Lets talk about custom hooks. React totally revolutionized the meaning of functional programming language when they introduced state management - think state of being. Happy or Sad, Asleep or Awake, Outside or Inside...",
-      link: "https://medium.com/example3",
+      link: "https://medium.com/@jordanfromnovember/custom-hooks-usepartymode-beginner-friendly-0b098c4de657",
     },
     {
       title:

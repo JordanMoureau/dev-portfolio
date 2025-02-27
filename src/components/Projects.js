@@ -34,16 +34,6 @@ export default function ProjectsSection() {
       github: "https://github.com/JordanMoureau/poke-math",
       live: "https://pokemath.netlify.app/",
     },
-    // {
-    //   title: "Godzilla Codes | A Game for Learning Python",
-    //   description:
-    //     "I have built the godzilla game as promise, gamifying basic phython concepts for kids.",
-    //   stack: ["React", "Tailwind", "Netlify", "Custom Hooks"],
-    //   //  video: clarity,
-    //   github: "https://github.com/godzilla-codes",
-    //   live: "https://godzilla-codes.netlify.app/",
-    // },
-
     {
       title: "Strategic Flow | A Front-End",
       description:
@@ -66,26 +56,27 @@ export default function ProjectsSection() {
 
   return (
     <section className="py-12 w-full scroll-mt-[40px]" id="projects">
-      <h2 className="text-3xl font-bold ">Projects</h2>
+      <h2 className="text-3xl font-bold">Projects</h2>
       <p className="mb-6">
         Recent & notable projects I have designed and built
       </p>
-      <div className="w-full flex flex-col  gap-2">
+
+      <div className="w-full flex flex-col gap-2">
         {projects.map((project, index) => (
           <motion.div
             key={index}
-            className="relative  p-3 m-3 shadow-md flex flex-row items-center justify-center rounded-lg bg-tertiary  text-accent bg-opacity-30 hover:bg-opacity-50 group transition-all duration-300"
+            className="relative p-3 m-3 shadow-md flex flex-row items-center justify-center rounded-lg bg-tertiary text-accent bg-opacity-30 hover:bg-opacity-50 group transition-all duration-300"
             whileHover={{ scale: 1.02 }}
           >
             {/* Hover Video Preview */}
-            <div className="ml-3 w-1/2 h-3/4  rounded-md overflow-hidden group-hover:shadow-md object-cover">
+            <div className="ml-3 w-1/2 h-3/4 rounded-md overflow-hidden group-hover:shadow-md object-cover">
               <motion.video
                 src={project.video}
                 autoPlay
                 loop
                 muted
                 playsInline
-                className="object-cover group-hover:opacity-100  opacity-50"
+                className="object-cover group-hover:opacity-100 opacity-50"
               />
             </div>
 
@@ -95,12 +86,12 @@ export default function ProjectsSection() {
               <p className="mt-2">{project.description}</p>
 
               {/* GitHub & Live Links */}
-              <div className="mt-4  font-bold flex gap-4">
-                <a href={project.github} className=" font-bold">
+              <div className="mt-4 font-bold flex gap-4">
+                <a href={project.github} className="font-bold">
                   GitHub
                 </a>
                 /
-                <a href={project.live} className=" font-bold">
+                <a href={project.live} className="font-bold">
                   Live Site
                 </a>
               </div>
@@ -110,12 +101,73 @@ export default function ProjectsSection() {
                 {project.stack.map((tech, i) => (
                   <span
                     key={i}
-                    className="bg-secondary group-hover:bg-tertiary text-white text-sm px-3 py-1 rounded-full "
+                    className="bg-secondary group-hover:bg-tertiary text-white text-sm px-3 py-1 rounded-full"
                   >
                     {tech}
                   </span>
                 ))}
               </div>
+            </div>
+          </motion.div>
+        ))}
+      </div>
+
+      {/* 🔥 Current Projects Section */}
+      <CurrentProjects />
+    </section>
+  );
+}
+
+// ✅ New Component Inside ProjectsSection
+function CurrentProjects() {
+  const currentProjects = [
+    {
+      title: "Trader Joe's Themed Dating App | A Rails iOS app",
+      description:
+        "A personality-driven dating app built with Rails & React Native. Designed for niche connections with a humorous touch.",
+      stack: [
+        "Rails",
+        "React Native",
+        "Expo",
+        "Firebase",
+        "Socket.IO",
+        "Redux Toolkit",
+      ],
+    },
+
+    {
+      title: "Godzilla Learns Python | A Gamified Learning Experience",
+      description:
+        "An interactive learning game teaching Python basics with a monstrous twist—React-powered and built for fun.",
+      stack: ["React", "Next.js", "Vercel", "Custom Hooks", "Framer Motion"],
+    },
+  ];
+
+  return (
+    <section className="py-12 w-full">
+      <h2 className="text-2xl font-bold">Current Projects</h2>
+      <p className="mb-6">Ongoing builds I'm actively developing.</p>
+
+      <div className="w-full flex flex-col gap-4">
+        {currentProjects.map((project, index) => (
+          <motion.div
+            key={index}
+            className="relative p-4 shadow-md rounded-lg bg-secondary text-accent bg-opacity-30 hover:bg-opacity-50 group transition-all duration-300"
+            whileHover={{ scale: 1.02 }}
+          >
+            <h3 className="text-xl font-bold">{project.title}</h3>
+            <p className="mt-2">{project.description}</p>
+
+            {/* Tech Stack Bubbles */}
+            <div className="mt-4 flex flex-wrap justify-center align-center gap-2">
+              {project.stack.map((tech, i) => (
+                <span
+                  key={i}
+                  className="bg-tertiary text-white text-sm px-3 py-1 rounded-full"
+                >
+                  {tech}
+                </span>
+              ))}
             </div>
           </motion.div>
         ))}

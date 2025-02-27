@@ -3,7 +3,7 @@ export default function ResumeClip() {
     <section className="py-12 m-5 scroll-mt-[40px]" id="bio">
       <h2 className="text-3xl font-bold">About the Dev</h2>
       <p className="mb-6 font-bold">The highlight reel</p>
-      <ul className="space-y-4">
+      <ul className="space-y-4 mb-4">
         {/* 🔥 Short Bio */}
         <li className="p-6 text-left pb-10 border-b border-accent relative">
           <h3 className="text-xl font-bold">✌🏻 Full-Stack Software Engineer</h3>
@@ -54,9 +54,13 @@ export default function ResumeClip() {
         </li>
       </ul>{" "}
       {/* ✅ FIX: Properly closing the unordered list before the button */}
-      <button className="hover:underline mt-4 font-bold">
+      <a
+        href="/JordanResume.pdf"
+        download="Jordan-Moureau-Resume.pdf"
+        className="hover:underline font-bold"
+      >
         Download Full Resume →
-      </button>
+      </a>
     </section>
   );
 }
