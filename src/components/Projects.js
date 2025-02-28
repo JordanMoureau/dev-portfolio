@@ -86,12 +86,15 @@ export default function ProjectsSection() {
               <p className="mt-2">{project.description}</p>
 
               {/* GitHub & Live Links */}
-              <div className="mt-4 font-bold flex gap-4">
-                <a href={project.github} className="font-bold">
+              <div className="mt-4 font-bold flex gap-4 ">
+                <a
+                  href={project.github}
+                  className="font-bold hover:bg-tertiary"
+                >
                   GitHub
                 </a>
                 /
-                <a href={project.live} className="font-bold">
+                <a href={project.live} className="font-bold hover:bg-tertiary">
                   Live Site
                 </a>
               </div>
@@ -124,7 +127,7 @@ function CurrentProjects() {
     {
       title: "Trader Joe's Themed Dating App | A Rails iOS app",
       description:
-        "A personality-driven dating app built with Rails & React Native. Designed for niche connections with a humorous touch.",
+        "A niche dating app to expand my knowledge of react native and give my fellow trader joe's lovers a place to connect. Preferably not get sued, but hey you only live once right?",
       stack: [
         "Rails",
         "React Native",
@@ -144,7 +147,7 @@ function CurrentProjects() {
   ];
 
   return (
-    <section className="py-12 w-full">
+    <section className="py-12 px-3">
       <h2 className="text-2xl font-bold">Current Projects</h2>
       <p className="mb-6">Ongoing builds I'm actively developing.</p>
 
@@ -163,7 +166,7 @@ function CurrentProjects() {
               {project.stack.map((tech, i) => (
                 <span
                   key={i}
-                  className="bg-tertiary text-white text-sm px-3 py-1 rounded-full"
+                  className="bg-tertiary group-hover:bg-secondary text-white text-sm px-3 py-1 rounded-full"
                 >
                   {tech}
                 </span>
